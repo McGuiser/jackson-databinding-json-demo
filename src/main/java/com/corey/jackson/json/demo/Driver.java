@@ -20,8 +20,22 @@ public class Driver {
 						new File("data/sample-full.json"), Student.class);
 			
 			// Print first name and last name
+			
 			System.out.println("First name: " + theStudent.getFirstName());
 			System.out.println("Last name: " + theStudent.getLastName());
+			
+			// Print out address: street and city
+			
+			Address tempAddress = theStudent.getAddress();
+			
+			System.out.println("Street: " + tempAddress.getStreet());
+			System.out.println("City: " + tempAddress.getCity());
+			
+			// Print out languages
+			
+			for (String tempLang: theStudent.getLanguages()) {
+				System.out.println(tempLang);
+			}
 			
 		} catch (Exception exc) {
 			exc.printStackTrace();
